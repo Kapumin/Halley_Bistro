@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".get_started.GetStartedActivity">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/getStartedLL"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dark_transparent_background" />
+
+    <LinearLayout
+        android:id="@+id/getStartedLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/welcome_to_halley_s_bistro"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toTopOf="@id/textSubHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textSubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@null"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/order_your_favourite_food_now"
+            android:textColor="@color/colorHintText"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/getStartedButton"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="?actionBarSize"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/get_started"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            app:cornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
